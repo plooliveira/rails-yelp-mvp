@@ -1,0 +1,10 @@
+<%= link_to new_restaurant_path do %>
+<div class="btn btn-primary">
+  Novo restaurante
+</div>
+<%end%>
+<%@restaurants.each do |restaurant|%>
+<p>
+  <%= link_to restaurant.name, restaurant_path(restaurant.id) %>
+</p>
+<%end%>
